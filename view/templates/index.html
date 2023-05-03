@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/icon/icon.png" type="image/icon type">
+    <link href="/static/icon/icon.png" rel="shortcut icon" type="image/icon type">
+    <link href="/static/css/head.css" rel="stylesheet">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <script src="/static/js/index.js"></script>
+
+    <title>University of Westeros | UW</title>
+</head>
+
+<body>
+<h1 class="h1"><img class="logo" src="/static/icon/icon.png" alt="University Emblem">
+    University of Westeros
+    <button class="connect_wallet_button" id="connect_wallet_button">Connect Wallet</button>
+</h1>
+
+<form action="/search" method="POST">
+    <div class="address_header">
+            <span class="error_message">
+                {{ _address_error }}
+            </span><br>
+        To get details about issued Diploma on any address, enter wallet address or connect your wallet to
+        sync address:
+
+        <div class="address">
+            <label for="address_box">Address:</label>
+            <input class="address_box" id="address_box" name="wallet_address" required type="text"
+                   placeholder="Address">
+            <input class="submit_button" type="submit" value="Submit">
+        </div>
+    </div>
+</form>
+<br>
+
+<form action="/search" method="POST">
+    <div class="enrolment_header">
+            <span class="error_message">
+                {{ _enrolment_error }}
+            </span><br>
+        Enter "Enrolment Number" to search records:
+
+        <div class="enrolment">
+            <label for="enrolment_box">*Enrol. No.:</label>
+            <input class="enrolment_box" id="enrolment_box" name="enrolment_number" required type="number"
+                   placeholder="2021208208">
+            <input class="submit_button" type="submit" value="Submit">
+            <br>
+            <span class="enrolment_footer">
+                    *An enrolment number must only be 10-digit only numeric value.
+                </span>
+        </div>
+    </div>
+</form>
+<br>
+
+<form action="/view" method="POST">
+    <div class="certificate_header">
+            <span class="error_message">
+                {{ _certificate_error }}
+            </span><br>
+        Enter "Certificate Number" to fetch other details about the Diploma:
+
+        <div class="certificate">
+            <label for="certificate_box">*Certificate Number:</label>
+            <input class="certificate_box" id="certificate_box" name="certificate_number" required type="number"
+                   placeholder="Certificate Number:">
+            <input class="submit_button" type="submit" value="Submit">
+            <br>
+            <span class="certificate_footer">
+                    *A certificate number is a unique 12-digit only numeric identifier for every Diploma issued.
+                </span>
+        </div>
+    </div>
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+.cert_content {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+    margin: 0 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.diploma_img {
+    display: inline-block;
+    overflow: hidden;
+    max-height: 80vh;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #9b9b9b, #777777);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.diploma_img:hover {
+    opacity: 0.85;
+}
+
+.content {
+    display: flex;
+    margin-left: 7%;
+}
+
+tr {
+    height: 70px;
+}
+
+tr:hover {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+td {
+    width: 250px;
+}
+
+td:nth-child(even) {
+    padding-left: 24px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000000cc;
+}
+
+.modal_img {
+    margin: auto;
+    display: block;
+    max-width: 700px;
+    max-height: 80%;
+}
+
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal_img {
+        width: 90%;
+    }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/static/icon/icon.png" rel="icon" type="image/icon type">
+    <link href="/static/css/head.css" rel="stylesheet">
+    <link href="/static/css/view.css" rel="stylesheet">
+    <script src="/static/js/view.js"></script>
+
+    <title>University of Westeros | UW</title>
+</head>
+
+<body>
+<h1 class="h1"><img alt="University Emblem" class="logo" src="/static/icon/icon.png">
+    University of Westeros
+    <img alt="University Emblem" class="logo_r" src="/static/icon/icon.png">
+</h1>
+
+<div class="cert_content">
+    <img alt="Diploma Image" class="diploma_img" onclick="openModal()" src="{{ _imageURI }}">
+    <div class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal_img">
+    </div>
+
+    <div class="content">
+        <table class="content_table">
+            <tr>
+                <td>
+                    University:
+                </td>
+                <td>
+                    {{ _university }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Student Name:
+                </td>
+                <td>
+                    {{ _studentName }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enrolment Number:
+                </td>
+                <td>
+                    {{ _enrolmentNumber }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Program:
+                </td>
+                <td>
+                    {{ _program }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Specialisation:
+                </td>
+                <td>
+                    {{ _specialisation }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    GPA:
+                </td>
+                <td>
+                    {{ _gpa }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Certificate Number:
+                </td>
+                <td>
+                    {{ _certificateNumber }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date of Issue:
+                </td>
+                <td>
+                    {{ _dateOfIssue }}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+
+</html>

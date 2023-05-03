@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/static/icon/icon.png" rel="icon" type="image/icon type">
+    <link href="/static/css/head.css" rel="stylesheet">
+    <link href="/static/css/search.css" rel="stylesheet">
+
+    <title>University of Westeros | UW</title>
+</head>
+
+<body>
+<h1 class="h1"><img alt="University Emblem" class="logo" src="/static/icon/icon.png">
+    University of Westeros
+    <img alt="University Emblem" class="logo_r" src="/static/icon/icon.png">
+</h1>
+
+<div class="container">
+    <h2 class="h2">
+        Following Diploma exists for your search:
+    </h2>
+    {% for result in results %}
+        <form action="/view" class="form" method="POST">
+            <input name="certificate_number" type="hidden" value="{{ result['alt'] }}">
+            <button class="button" type="submit">
+                <img alt="{{ result['alt'] }}" class="img" src="{{ result['src'] }}">
+                <div class="img_txt">
+                    <p>{{ result['alt'] }}</p>
+                </div>
+            </button>
+
+        </form>
+    {% endfor %}
+</div>
+
+</body>
+
+</html>

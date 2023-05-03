@@ -1,0 +1,81 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #abaaaa;
+}
+
+.h1 {
+    text-align: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-left: 5%;
+    position: relative;
+    display: block;
+}
+
+.logo::after {
+    content: attr(alt);
+    position: fixed;
+    float: left;
+    margin-left: 1%;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo:hover::after {
+    opacity: 1;
+}
+
+.connect_wallet_button {
+    display: inline;
+    width: max-content;
+    float: right;
+    margin-right: 5%;
+    padding: 10px;
+    border-color: antiquewhite;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.0;
+    color: #ffffff;
+    background-color: #262626;
+    cursor: pointer;
+}
+
+.connect_wallet_button:hover {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.logo_r {
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 5%;
+    display: block;
+}
+
+.logo_r::after {
+    content: attr(alt);
+    position: fixed;
+    float: right;
+    margin-right: 2%;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo_r:hover::after {
+    opacity: 1;
+}

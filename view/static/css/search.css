@@ -1,0 +1,55 @@
+.container {
+  flex-wrap: wrap;
+  margin: 0 15%;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.h2 {
+  text-align: left;
+  display: block;
+  font-weight: lighter;
+}
+
+.form {
+  display: inline-block;
+  overflow: hidden;
+  width: 48%;
+}
+
+.button {
+  margin: auto;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.img {
+  display: flex;
+  margin: auto;
+  align-content: center;
+  overflow: hidden;
+  max-height: 70vh;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #9b9b9b, #777777);
+  cursor: pointer;
+}
+
+.img_txt {
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    margin: 0 5%;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .img {
+    width: 90%;
+  }
+}

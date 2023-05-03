@@ -1,0 +1,26 @@
+.recover_button, .addOfficeButton, .removeOfficeButton, .transferOwnershipButton, .mint_button {
+    margin-top: 10px;
+    min-width: min-content;
+    width: 150px;
+    padding: 0.5rem;
+    border-color: #ffffff;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #000000;
+    background-color: #fdfdfd;
+    cursor: pointer;
+}
+
+.mint_diploma, .update_diploma, .recover_diploma, .update_diploma {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #231717;
+    color: #ffffff;
+    text-decoration: none;
+    border-color: antiquewhite;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    width: max-content;
+}

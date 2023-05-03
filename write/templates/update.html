@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/static/icon/icon.png" rel="icon" type="image/icon type">
+    <link href="/static/icon/icon.png" rel="shortcut icon" type="image/icon type">
+    <link href="/static/css/head.css" rel="stylesheet">
+    <link href="/static/css/head2.css" rel="stylesheet">
+    <link href="/static/css/admin.css" rel="stylesheet">
+    <script src="/static/js/ethers.js"></script>
+    <script src="/static/js/var.js"></script>
+    <script src="/static/js/func.js"></script>
+    <script src="/static/js/update.js"></script>
+
+    <title>University of Westeros | UW</title>
+</head>
+
+<body>
+<h1 class="h1"><img alt="University Emblem" class="logo" src="/static/icon/icon.png">
+    University of Westeros
+    <button class="connect_wallet_button" id="connect_wallet_button" onclick="connectWallet()">Connect Wallet</button>
+</h1>
+
+<div class="container">
+    <div>
+        <span id="message">
+        </span>
+        <span id="more">
+            Enter details to update Diploma:
+        </span>
+    </div>
+
+    <table class="content_table">
+        <tr>
+            <td>
+                <label for="certificate_number">Certificate Number:</label>
+            </td>
+            <td>
+                <input class="box" id="certificate_number" name="certificate_number" placeholder="Certificate Number"
+                       required type="number">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="student_name">Student's Name:</label>
+            </td>
+            <td>
+                <input class="box" id="student_name" name="student_name" placeholder="Full Name"
+                       required type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="enrolment_number">Enrolment Number:</label>
+            </td>
+            <td>
+                <input class="box" id="enrolment_number" name="enrolment_number"
+                       placeholder="Enrolment Number" required type="number">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="program">Program:</label>
+            </td>
+            <td>
+                <input class="box" id="program" name="program" placeholder="Program" required
+                       type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="specialisation">Specialisation:</label>
+            </td>
+            <td>
+                <input class="box" id="specialisation" name="specialisation"
+                       placeholder="Specialisation" required type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="gpa">GPA:</label>
+            </td>
+            <td>
+                <input class="box" id="gpa" name="gpa" placeholder="GPA" required type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="dateOfIssue">Date of Issue:</label>
+            </td>
+            <td>
+                <input class="box" id="dateOfIssue" name="dateOfIssue" placeholder="Address" required
+                       type="month">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="uri">URI:</label>
+            </td>
+            <td>
+                <input class="box" id="uri" name="uri" placeholder="URI" required type="url">
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td style="text-align: right">
+                <button class="mint_button" onclick="update()">Update</button>
+            </td>
+        </tr>
+        <tr style="text-align: center">
+            <td>
+                <form action="/admin">
+                    <input class="recover_diploma" type="submit" value="Mint Diploma">
+                </form>
+
+            </td>
+            <td>
+                <form action="/recover" method="POST">
+                    <input class="update_diploma" type="submit" value="Recover Diploma">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+
+</html>
