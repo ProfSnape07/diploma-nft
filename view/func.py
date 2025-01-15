@@ -58,7 +58,7 @@ def exists_certificate(certificate_number):
     try:
         contract.functions.tokenURI(certificate_number).call()
         return True
-    except (ValidationError, ContractLogicError, ValueError):
+    except (Web3ValidationError, ContractLogicError, ValueError):
         return False
 
 
@@ -138,7 +138,3 @@ def search_with_enrolment(enrolment_number):
 
         certificate_number += 1
     return results
-
-
-if __name__ == '__main__':
-    pass
