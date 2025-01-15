@@ -28,7 +28,7 @@ def to_unix_timestamp(year_month: str) -> int:
     return unix_timestamp
 
 
-def reverse_unix_timestamp(unix_timestamp: int | str) -> bool | str:
+def reverse_unix_timestamp(unix_timestamp: int or str) -> bool or str:
     try:
         unix_timestamp = int(unix_timestamp)
     except ValueError:
@@ -73,7 +73,7 @@ def search_with_certificate(certificate_number):
     return result
 
 
-def tokenuri_to_imageuri(tokenuri: str) -> int | str:
+def tokenuri_to_imageuri(tokenuri: str) -> int or str:
     try:
         uri = requests.get(tokenuri)
         try:
